@@ -23,6 +23,7 @@ export default function TextForm(props) {
         console.log('On Change.')
         setText(event.target.value)
         setMorseCode(textToMorse(setText))
+        
     }
     const handleDownClick = () => {
         let sText = text.toLowerCase();
@@ -51,7 +52,7 @@ export default function TextForm(props) {
             </div>
             <div className="container my-3">
                 <h2>Your Text Summary</h2>
-                <p>{text.split(' ').length} Words and {text.length} Character</p>
+                <p>{text.trim().split(/\s+/).length } Words and {text.length} Character</p>
                 <p>{0.008*text.split(' ').length} Mins to read</p>
                 <h3>Morse Code</h3>
                 <p>{moreseCode}</p>
