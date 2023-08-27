@@ -41,3 +41,76 @@
   }
   
 }
+/* TextForm.css */
+.custom-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.primary-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.success-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.warning-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.infoo-btn {
+  background-color: #17a2b8;
+  color: white;
+  border: '1px solid red' 
+}
+
+.light-btn {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.danger-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Add hover styles */
+.custom-btn:hover {
+  opacity: 0.8;
+}
+/* Your existing styles for Navbar */
+.nav-item-custom {
+  margin-right: 10px; /* Add space between navigation items */
+}
+
+.nav-link-custom {
+  color: #333; /* Set default link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link-custom.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000; /* Set active link color */
+}
+
+/* Dark background */
+.navbar-dark .nav-link-custom {
+  color: #fff; /* Set link color for dark background */
+}
+
+/* Light background */
+.navbar-light .nav-link-custom {
+  color: #333; /* Set link color for light background */
+}
+
+

@@ -1,6 +1,6 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom';
+import '../App.css';
 
 export default function Navbar(props) {
   return (
@@ -13,17 +13,49 @@ export default function Navbar(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
-            </li>
-          </ul>
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+    <li className="nav-item-custom">
+        <NavLink
+            className="nav-link-custom"
+            activeClassName="active"
+            exact
+            to="/"
+        >
+            Home
+        </NavLink>
+    </li>
+    <li className="nav-item-custom">
+        <NavLink
+            className="nav-link-custom"
+            activeClassName="active"
+            to="/qrcode"
+        >
+            Qr Code
+        </NavLink>
+    </li>
+    <li className="nav-item-custom">
+        <NavLink
+            className="nav-link-custom"
+            activeClassName="active"
+            to="/morsecode"
+        >
+            Morse Code
+        </NavLink>
+    </li>
+    <li className="nav-item-custom">
+        <NavLink
+            className="nav-link-custom"
+            activeClassName="active"
+            to="/about"
+        >
+            About
+        </NavLink>
+    </li>
+</ul>
+
           <div className={`form-check form-switch text-${props.mode === 'dark' ? 'white' : 'dark'} mx-3`}>
             <input className="form-check-input" onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckDefault" />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{ color: '#fac1a5' }}>
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{ color: 'black? white :black ' }}>
               {props.mode}
             </label>
           </div>
